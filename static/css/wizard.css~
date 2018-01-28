@@ -1,0 +1,292 @@
+/**
+ *
+ **/
+
+@import url(http://fonts.googleapis.com/css?family=Cantora+One:400,400italic,700,700italic|PT+Sans|Oxygen+Mono);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic|PT+Sans|Oxygen+Mono);
+
+html {
+  /*font-family: "Source Sans Pro", sans-serif;*/
+  font-family: "Cantora One", sans-serif;
+}
+
+BODY {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2.entry-title {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+#banner {
+  text-align: center;
+}
+
+#banner a {
+  color: #000000;
+
+}
+
+#banner h1{
+  font-size: 2.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+#banner h5{
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+#banner img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ol#post-list {
+  list-style: none;
+}
+
+ul.minimal {
+  margin-left: 1em;
+  list-style: none;     
+}
+
+nav#menu {
+  font-size: 1.4rem;
+  /*font-weight: bold;*/
+  border-top: 1px solid grey;
+  text-align:center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 1px;
+}
+
+nav li {
+  list-style: inside none;
+  margin: 1px 10px 1px 10px;
+  padding: 1px 1px 1px 1px;
+  display: inline-block;
+  width: auto;
+  /*border: 1px solid black; /* #FFFFCC; */
+}
+
+nav a {
+  color: #000000;
+  padding: 0.5rem 2rem 0.4rem 2rem;
+  /*
+  padding-left: 2rem;
+  padding-right: 2rem;
+  */
+}
+
+nav a:hover {
+  color: #C69F70;
+  text-decoration: none;
+  /*
+  background: #FFFFCC;
+  */
+}
+
+/*
+nav a:active {
+  text-decoration: none;
+  background: #FFFFCC;
+  border: 1px solid #777;
+}
+*/
+
+@media only screen and (max-device-width: 480px) {
+  .news {
+    display: none;
+  }
+}
+
+li.minimal {
+  /* font-size: 1.0em; */
+  font-weight: normal;
+  margin-left: 1em;
+  list-style: none;     
+}
+
+li {
+  text-align: justify;
+  /*color: #000000;*/
+}
+
+p {
+  text-align: justify;
+}
+
+p a {
+  color: #C69F70;
+}
+
+a {
+  /* font-family: Arial, Helvetica, sans-serif;*/
+  color: #C69F70;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+        
+a.footer {
+  background: #000000;
+  text-decoration: underline;
+  color: #CCCCCC;
+}
+
+a.footer:hover {
+  background: #000000;
+
+  text-decoration: none;
+  color: #CCCCCC;
+}
+
+a.standard {
+  text-decoration: underline;
+  color: #000000;
+  background: #FFFFCC;
+}
+
+a.standard:hover {
+  color: #0000FF;
+  text-decoration: none;
+  background: #FFFFCC;
+}
+        
+a.standard:visited {
+  text-decoration: underline;
+  color: #000000;
+  background: #FFFFCC;
+}
+
+a.standard:visited:hover
+{
+  text-decoration: none;
+  color: #000000;
+  background: #FFFFCC;
+}
+
+.header {
+  background: rgb(51,102,153);
+  border: solid;
+  border-width: thin;
+  padding: 0.5em;
+  FONT: bold 12px Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+}
+
+footer#contentinfo.body {
+  border-top: 1px solid grey;
+  font-size: 1rem;
+
+  padding-top: 0.5rem;
+  text-align: center;
+  color: #FDFDE4;
+}
+
+footer address.body {
+  border-radius: 3px;
+  background: #777; /*99cc00;*/
+  padding: 0.5rem;
+}
+
+table,td {
+  border:1px none black;
+}
+
+.entry-content {
+  font-size: 1.2rem;
+}
+
+.entry-content p::first-letter {
+  font-size: 3rem;
+  float: left;
+  line-height: 3rem;
+}
+
+.entry-content img {
+  margin-left:auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+img.centered {
+  display: block;
+}
+
+.entry-title a {
+  color: #000000;
+  text-decoration: none;
+  /*padding-left: 5px;
+  padding-right: 5px;
+  color: #000000;
+  background: #CCCCCC;
+  display: block;
+  width: auto;
+   */
+}
+
+.entry-title a:hover {
+  text-decoration: underline;
+  /*
+  color: #000000;
+  display: block;
+  width: auto;
+  */
+}
+        
+.entry-title a:visited {
+  /*
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  width: auto;
+  */
+}
+
+/*
+.entry-title a:visited:hover
+{
+  text-decoration: none;
+  color: #000000;
+  display: block;
+  width: auto;
+}
+*/
+
+/*
+ *
+ */
