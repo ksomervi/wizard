@@ -4,9 +4,18 @@
         {% block head %}
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ AUTHOR_DESCRIPTION }}">
-  <meta name="author" content="{{ AUTHOR }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{{ AUTHOR_DESCRIPTION }}">
+        <meta name="author" content="{{ AUTHOR }}">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!-- Style Meta Data -->
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/wizard.css" type="text/css" />
@@ -39,14 +48,17 @@
 </head>
 
 <body id="index" class="home">
+  <div class="container-fluid">
         <header id="banner" class="body">
-                <a href="{{ SITEURL }}/"><img src="{{ SITEURL }}/{{ SITE_LOGO }}"></a>
-                <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+                <a href="{{ SITEURL }}/"><img src="{{ SITE_LOGO }}"></a>
+                <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
                 <h5>{{ SITE_TAGLINE }}</h5>
         </header><!-- /#banner -->
-        <nav id="menu"><ul>
+  </div><!-- .container-fluid -->
+  <div class="container-fluid">
+        <nav id="menu" class="navbar navbar-center"><ul class="nav">
         {% for title, link in MENUITEMS %}
-        <li{% if link == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></li>
+            <li{% if link == page %} class="active"{% endif %}><a href="{{ link }}">{{ title }}</a></li>
         {% endfor %}
         {% if DISPLAY_PAGES_ON_MENU %}
           {% for p in pages %}
@@ -66,9 +78,10 @@
                 <address id="about" class="vcard body">
                 Written by a mortal, generated with  <a
                   href="http://getpelican.com/">Pelican</a>.
-                &mdash; Somervill.org
+                &mdash; <a href="{{ SITEURL }}/">{{ SITENAME }}</a>
                 &mdash; &copy; 2018 Kevin Somervill
                 </address><!-- /#about -->
         </footer><!-- /#contentinfo -->
+  </div><!-- .container-fluid -->
 </body>
 </html>
