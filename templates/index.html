@@ -8,6 +8,7 @@
 <ol id="post-list">
 {% for article in articles_page.object_list %}
         <li><article class="hentry">
+                <div class="entry-content col-sm-8"> 
                 <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
                 <footer class="post-info">
                     <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
@@ -18,6 +19,8 @@
                     </address>
                 </footer><!-- /.post-info -->
                 <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
+                </div><!-- /.entry-content -->
+                <div class="entry-content col-sm-4"> {{ article.featured_image }} </div>
         </article></li>
 {% endfor %}
 </ol><!-- /#posts-list -->
