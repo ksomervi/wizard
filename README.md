@@ -10,6 +10,6 @@ provided as a reference in the source code.
 The theme supports a few configuration items set in the pelicanconf file:
 - `SITE_LOGO` - to set a picture in the banner (make sure to include where to
   find the image
-- `SITE_TAGLINE` - short subheading or subtitle for your site.
-
+- `SITE_SUBTITLE` - short subheading or subtitle for your site.
+- `COPYRIGHT` - short copyright notice
 

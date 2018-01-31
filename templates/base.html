@@ -48,14 +48,13 @@
 </head>
 
 <body id="index" class="home">
-  <div class="container-fluid">
+  <!--div class="container-fluid" -->
         <header id="banner" class="body">
-                <a href="{{ SITEURL }}/"><img src="{{ SITE_LOGO }}"></a>
+          <a href="{{ SITEURL }}/"><img alt="{{SITENAME}} logo" src="{{ SITE_LOGO }}"></a>
                 <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-                <h5>{{ SITE_TAGLINE }}</h5>
+                <h5>{{ SITESUBTITLE }}</h5>
         </header><!-- /#banner -->
-  </div><!-- .container-fluid -->
-  <div class="container-fluid">
+        <!-- /div> --><!-- .container-fluid -->
         <nav id="menu" class="navbar navbar-center"><ul class="nav">
         {% for title, link in MENUITEMS %}
             <li{% if link == page %} class="active"{% endif %}><a href="{{ link }}">{{ title }}</a></li>
@@ -72,6 +71,7 @@
           {% endif %}
         {% endif %}
         </ul></nav><!-- /#menu -->
+  <div class="container-fluid">
         {% block content %}
         {% endblock %}
         <footer id="contentinfo" class="body">
