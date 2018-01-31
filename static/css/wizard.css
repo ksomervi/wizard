@@ -18,7 +18,7 @@ BODY {
   margin-left: 4rem;
   margin-right: 4rem;
   */
-  background: #FFFFEE; /* off-white */
+  /*background: #FFFFEE; /* off-white */
 }
 
 h1, h2, h3 {
@@ -160,28 +160,6 @@ a:hover {
   text-decoration: underline;
 }
         
-a.footer {
-  background: #000000;
-  text-decoration: underline;
-  color: #CCCCCC;
-}
-
-a.footer:hover {
-  background: #000000;
-
-  text-decoration: none;
-  color: #CCCCCC;
-}
-
-.header {
-  background: rgb(51,102,153);
-  border: solid;
-  border-width: thin;
-  padding: 0.5em;
-  FONT: bold 12px Arial, Helvetica, sans-serif;
-  color: #FFFFFF;
-}
-
 footer#contentinfo.body {
   border-top: 1px solid grey;
   font-size: 1rem;
@@ -224,6 +202,15 @@ table,td {
 }
 
 img.centered {
+  margin-left:auto;
+  margin-right: auto;
+  display: block;
+}
+
+video.centered {
+  margin-left:auto;
+  margin-right: auto;
+
   display: block;
 }
 
