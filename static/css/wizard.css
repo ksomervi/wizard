@@ -140,7 +140,6 @@ nav a:active {
 
 li {
   text-align: justify;
-  /*color: #000000;*/
 }
 
 p {
@@ -161,10 +160,13 @@ a:hover {
   text-decoration: underline;
 }
         
+.post-info > address.author {
+  display: inline-block;
+}
+
 footer#contentinfo.body {
   border-top: 1px solid grey;
   font-size: 1rem;
-
   padding-top: 0.5rem;
   text-align: center;
   color: #FDFDE4;
@@ -255,6 +257,33 @@ video.centered {
   width: auto;
 }
 */
+
+aside.sidebar {
+  border: 2px solid #777;
+}
+
+.sidebar h3 {
+  text-align: center;
+  text-transform: lowercase;
+  display: block;
+  color: #FDFDE4;
+  background: #777;
+  margin: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.75rem;
+}
+
+.sidebar ul.nav {
+  display: inline-block;
+  text-align: center;
+}
+
+
+
+.sidebar i.fa.fas-rss {
+  font-size: -webkit-xxx-large;
+  font-size: 2rem;
+}
 
 .twitter-share-button {
   float: right;

@@ -1,0 +1,59 @@
+  <!-- Sidebar -->
+    <aside class="sidebar">
+        {% if DISPLAY_PAGES_ON_SIDEBAR and pages %}
+        <ul class="static-item">
+            {% for p in pages %}
+                <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            {% endfor %}
+        </ul>        
+        {% endif %}
+
+        {% if DISPLAY_CATEGORIES_ON_SIDEBAR and categories %}
+        <h3>Categories</h3>
+          <ul class="nav">
+                {% for cat, articles in categories %}
+                    <li{% if cat == category %}{% endif %}><a href="{{ SITEURL
+                    }}/{{ cat.url }}">{{ cat }} ({{ articles|count }})</a></li>
+                {% endfor %}
+          </ul>
+        {% endif %}
+
+        <h3>Tags</h3>
+          <ul class="nav menu-list">
+            {%- for tag, articles in tags|sort %}
+            <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} ({{ articles|count }})</a></li>
+            {% endfor %}
+          </ul>
+
+        {% if LINKS %}
+            <h3>BLOGROLLS</h3>
+            <ul>
+                {% for name, link in LINKS %}
+                    <li><a href="{{ link }}">{{ name }}</a></li>
+                {% endfor %}
+            </ul> 
+        {% endif %}
+   
+        <!--
+        <p> 
+        {% if SOCIAL %}
+            {% for name, link in SOCIAL %}
+                <span><a href="{{ link }}" target="_blank">
+                      <i class="fa fa-{{ name|lower }}"></i></a></span>
+            {% endfor %}
+        {% endif %}
+        </p>
+        -->
+        <p>
+        {% if FEED_ALL_ATOM %}
+            <a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">
+              <i class="fa fa-rss"></i></a>
+        {% endif %}
+        </p>
+        <p>
+        {% if FEED_ALL_RSS %}
+            <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate"><i class="fa fa-rss"></i></a>
+        {% endif %}
+        </p>
+    </aside>
+    
