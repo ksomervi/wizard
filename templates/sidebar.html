@@ -1,49 +1,58 @@
   <!-- Sidebar -->
-    <aside class="sidebar">
         {% if DISPLAY_PAGES_ON_SIDEBAR and pages %}
+    <aside class="sidebar">
         <ul class="static-item">
             {% for p in pages %}
                 <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
             {% endfor %}
-        </ul>        
+        </ul>
+    </aside>
         {% endif %}
 
         {% if DISPLAY_CATEGORIES_ON_SIDEBAR and categories %}
+    <aside class="sidebar">
         <h3>Categories</h3>
           <ul class="nav">
                 {% for cat, articles in categories %}
-                    <li{% if cat == category %}{% endif %}><a href="{{ SITEURL
-                    }}/{{ cat.url }}">{{ cat }} ({{ articles|count }})</a></li>
+              <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }} ({{ articles|count }})</a></li>
                 {% endfor %}
           </ul>
+    </aside>
         {% endif %}
 
+    <aside class="sidebar">
         <h3>Tags</h3>
-          <ul class="nav menu-list">
+          <ul class="nav">
             {%- for tag, articles in tags|sort %}
             <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} ({{ articles|count }})</a></li>
             {% endfor %}
           </ul>
+    </aside>
 
         {% if LINKS %}
+    <aside class="sidebar">
             <h3>BLOGROLLS</h3>
             <ul>
                 {% for name, link in LINKS %}
                     <li><a href="{{ link }}">{{ name }}</a></li>
                 {% endfor %}
-            </ul> 
+            </ul>
+    </aside>
         {% endif %}
-   
-        <!--
-        <p> 
+
         {% if SOCIAL %}
+    <aside class="sidebar">
+        <h3>social</h3>
+          <ul class="social-list">
             {% for name, link in SOCIAL %}
-                <span><a href="{{ link }}" target="_blank">
-                      <i class="fa fa-{{ name|lower }}"></i></a></span>
+            <li><a href="{{ link }}" target="_blank">
+                  <i class="fa fa-{{ name|lower }}"></i></a></li>
             {% endfor %}
+          </ul>
+    </aside>
         {% endif %}
-        </p>
-        -->
+
+    <!--
         <p>
         {% if FEED_ALL_ATOM %}
             <a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">
@@ -55,5 +64,4 @@
             <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate"><i class="fa fa-rss"></i></a>
         {% endif %}
         </p>
-    </aside>
-    
+    -->

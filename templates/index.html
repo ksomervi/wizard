@@ -2,16 +2,18 @@
 {% block content %}
 <section id="content">
 {% block content_title %}
-<h2>Posts</h2>
+  <h2>Posts</h2>
 {% endblock %}
 
-<ol id="post-list">
 {% for article in articles_page.object_list %}
-        <li><article class="hentry">
-            <div class="row"><!-- .row -->
-                <div class="entry-content col-sm-8">
-                <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
-                <footer class="post-info">
+      <div class="row"> <!-- .row summary -->
+  {% if articles.index(article) == 0 %}
+        <div class="col-md-12">
+        <article class="hentry">
+          <header>
+         {{ article.featured_image }}
+              <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
+                  <footer class="post-info">
                   Posted:
                     <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
                     <address class="vcard author">by
@@ -22,12 +24,23 @@
                     <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
                 </footer><!-- /.post-info -->
                 <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
-                </div><!-- /.entry-content .col-sm-8 -->
-                <div class="entry-content col-sm-4"> {{ article.featured_image }} </div>
-            </div><!-- .row -->
-        </article></li>
+        </article>
+      </div>
+    {% else %}
+      {% if article.featured_image %}
+      <div class="feature-image col-md-4">
+         {{ article.featured_image }}
+      </div> <!-- .col-md-4 -->
+      <div class="entry-content col-md-8">
+        {% else %}
+      <div class="entry-content col-md-12">
+        {% endif %}
+    {% include 'article_summary.html' %}
+      </div> <!-- .entry-content .col-md-8 -->
+  {% endif %}
+    </div>
+    <!-- .row summary -->
 {% endfor %}
-</ol><!-- /#posts-list -->
 {% if articles_page.has_other_pages() %}
     {% include 'pagination.html' %}
 {% endif %}
