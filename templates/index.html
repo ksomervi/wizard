@@ -8,7 +8,7 @@
 {% for article in articles_page.object_list %}
       <div class="row"> <!-- .row summary -->
   {% if articles.index(article) == 0 %}
-        <div class="col-md-12">
+        <div class="col-sm-12">
         <article class="hentry">
           <header>
          {{ article.featured_image }}
@@ -28,12 +28,12 @@
       </div>
     {% else %}
       {% if article.featured_image %}
-      <div class="feature-image col-md-4">
+      <div class="feature-image col-sm-4">
          {{ article.featured_image }}
       </div> <!-- .col-md-4 -->
-      <div class="entry-content col-md-8">
+      <div class="entry-content col-sm-8">
         {% else %}
-      <div class="entry-content col-md-12">
+      <div class="entry-content col-sm-12">
         {% endif %}
     {% include 'article_summary.html' %}
       </div> <!-- .entry-content .col-md-8 -->

@@ -138,12 +138,11 @@ nav a:active {
   background: #FFFFCC;
   border: 1px solid #777;
 }
-*/
 
 @media (min-width: 768px) .navbar {
   border-radius: unset;
-
 }
+*/
 
 ol#post-list {
   list-style: none;
@@ -152,15 +151,19 @@ ol#post-list {
 
 #content>div.row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   border-bottom: 1px solid var(--aux-border-color);
+  margin-top: 1.5rem;
 }
 
+/*
 @media only screen and (max-device-width: 1024px) {
   .entry-content img {
     width: 100%;
   }
 }
+*/
 
 li {
   text-align: justify;
@@ -208,7 +211,7 @@ table,td {
   border:1px none black;
 }
 
-.feature-image img {
+.feature-image>p>img {
   margin:auto;
   display: block;
   border-radius: 15px;
