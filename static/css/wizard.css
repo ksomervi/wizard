@@ -159,6 +159,7 @@ ol#post-list {
   align-items: center;
   border-bottom: 1px solid lightgrey; /* var(--aux-border-color); */
   margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 /*
@@ -172,6 +173,13 @@ ol#post-list {
 li {
   text-align: justify;
 }
+
+p.paginator {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 
 p {
   text-align: justify;
@@ -223,7 +231,7 @@ table,td {
 }
 
 .entry-content {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
 }
 
 /*
@@ -313,6 +321,7 @@ video.centered {
 
 aside.sidebar {
   /* border: 2px solid #777; */
+  margin-top: 24px;
   margin-bottom: 45px;
 }
 
@@ -335,7 +344,7 @@ aside.sidebar {
 .sidebar ul.nav {
   display: inline-block;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .sidebar ul.social-list {
