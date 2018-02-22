@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="content">
+
 {% block content_title %}
   <h2>Posts</h2>
 {% endblock %}
 
 {% for article in articles_page.object_list %}
-      <div class="row"> <!-- .row summary -->
+      <div class="row summary"> <!-- .row summary -->
   {% if articles.index(article) == 0 %}
         <div class="col-sm-12">
         <article class="hentry">
@@ -44,5 +44,5 @@
 {% if articles_page.has_other_pages() %}
     {% include 'pagination.html' %}
 {% endif %}
-</section><!-- /#content -->
+
 {% endblock content %}
