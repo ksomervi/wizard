@@ -35,7 +35,7 @@
       By {% for author in article.authors %}
           <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
         {% endfor %}
-        (From: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ category
+        (In: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ category
             }}</a>)
     </address>
     {% endif %}
