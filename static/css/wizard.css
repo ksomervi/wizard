@@ -77,10 +77,17 @@ ol#post-list {
 }
 div.summary {
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   align-items: center;
   border-bottom: 1px solid lightgrey;
   margin-top: 1.5rem;
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  div.summary {
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
 }
 p.paginator {
   margin-top: 10px;
@@ -122,6 +129,9 @@ footer > address.body {
 }
 table, td {
   border: 1px none black;
+}
+.feature-image {
+  margin: 0 -1px;
 }
 .feature-image > p > img {
   margin: auto;
