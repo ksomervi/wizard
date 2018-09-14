@@ -13,6 +13,9 @@ The theme supports a few configuration items set in the pelicanconf file:
 - `SITE_SUBTITLE` - short subheading or subtitle for your site.
 - `COPYRIGHT` - short copyright notice
 
-To recreate the css file:
+To recreate the css files:
 
     pyscss -C ../scss/base.scss > wizard.css
+    pygmentize -S bw -f html > bw.css
+
+Perhaps this should be managed via a makefile or script.

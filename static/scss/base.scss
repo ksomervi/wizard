@@ -8,9 +8,11 @@
 $main-bgcolor: white;
 $aux-color: white;
 $aux-bgcolor: #777;
+$aux-border-color: lightgrey;
 $link-color: #C69F70;
 $link-bgcolor: #eee;
-$aux-border-color: lightgrey;
+$code-color: #1a1a3f;
+$code-bgcolor: lightgrey;
 
 html {
   font-size: 16px; /* set the root em */
@@ -276,6 +278,12 @@ article.hentry {
   border-radius: 15px;
   max-width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.entry-content code {
+  color: #1a1a3f;
+  /*background-color: #f5f5f5;*/
+  background-color: lightgrey;
 }
 
 img.centered {
