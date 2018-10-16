@@ -12,7 +12,7 @@ $aux-border-color: lightgrey;
 $link-color: #C69F70;
 $link-bgcolor: #eee;
 $code-color: #1a1a3f;
-$code-bgcolor: lightgrey;
+$code-bgcolor: #f5f5f5;
 
 html {
   font-size: 16px; /* set the root em */
@@ -228,6 +228,23 @@ table,td {
   border:1px none black;
 }
 
+table.list {
+  margin: 0 auto;
+
+  td, th {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  tr:nth-child(even) {
+    background-color: $link-bgcolor;
+  }
+}
+
 .feature-image {
   /* Fix the weird wrapping (safari flex bug) on safari */
   margin: 0 -1px;
@@ -281,9 +298,8 @@ article.hentry {
 }
 
 .entry-content code {
-  color: #1a1a3f;
-  /*background-color: #f5f5f5;*/
-  background-color: lightgrey;
+  color: $code-color;
+  background-color: $code-bgcolor;
 }
 
 img.centered {

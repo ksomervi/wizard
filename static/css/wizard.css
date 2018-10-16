@@ -130,6 +130,19 @@ footer > address.body {
 table, td {
   border: 1px none black;
 }
+table.list {
+  margin: 0 auto;
+}
+table.list td, table.list th {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+table.list .centered {
+  text-align: center;
+}
+table.list tr:nth-child(even) {
+  background-color: #eee;
+}
 .feature-image {
   margin: 0 -1px;
 }
@@ -162,7 +175,7 @@ article.hentry > header img {
 }
 .entry-content code {
   color: #1a1a3f;
-  background-color: lightgrey;
+  background-color: #f5f5f5;
 }
 img.centered {
   margin-left: auto;
