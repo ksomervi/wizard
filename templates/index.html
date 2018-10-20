@@ -7,7 +7,7 @@
 {% for article in articles_page.object_list %}
       <div class="row summary"> <!-- .row summary -->
   {% if articles.index(article) == 0 %}
-        <div class="col-sm-12">
+        <div class="entry-content col-sm-12">
         <article class="hentry">
           <header>
          {{ article.featured_image }}
