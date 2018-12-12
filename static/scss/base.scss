@@ -176,12 +176,6 @@ div.summary {
 }
 /*}*/
 
-p.paginator {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
 li {
   text-align: justify;
 }
@@ -355,6 +349,28 @@ video.centered {
   width: auto;
 }
 */
+
+div.paginator {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-align: -webkit-center;
+}
+
+.pagination {
+  >li {
+    >a {
+      color: $link-color;
+    }
+  }
+  >.active {
+    >a {
+      /*color: #C69F70;*/
+      background-color: $aux_bgcolor;
+      border-color: $aux_bgcolor;
+    }
+  }
+}
 
 aside.sidebar {
   /* border: 2px solid #777; */
