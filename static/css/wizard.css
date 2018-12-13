@@ -103,6 +103,7 @@ a {
   text-decoration: none;
 }
 a:hover {
+  color: #777;
   text-decoration: underline;
 }
 .post-info > address.author {
@@ -115,6 +116,9 @@ footer#contentinfo.body {
   text-align: center;
   color: white;
   margin-top: 20px;
+}
+footer#contentinfo.body a:hover {
+  color: white;
 }
 footer > address.body {
   border-radius: 3px;
@@ -198,9 +202,16 @@ div.paginator {
 .pagination > li > a {
   color: #C69F70;
 }
+.pagination > li > a:hover {
+  color: #777;
+}
 .pagination > .active > a {
   background-color: #777;
   border-color: #777;
+}
+.pagination > .active > a:hover {
+  background-color: #C69F70;
+  border-color: #C69F70;
 }
 aside.sidebar {
   margin-bottom: 45px;

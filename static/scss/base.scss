@@ -195,6 +195,7 @@ a {
 }
 
 a:hover {
+  color: $aux-bgcolor;
   text-decoration: underline;
 }
 
@@ -209,6 +210,10 @@ footer#contentinfo.body {
   text-align: center;
   color: $aux-color;
   margin-top: 20px;
+
+  a:hover {
+    color: $aux-color;
+  }
 }
 
 footer > address.body {
@@ -362,12 +367,20 @@ div.paginator {
     >a {
       color: $link-color;
     }
+    >a:hover {
+      color: $aux-bgcolor;
+    }
   }
   >.active {
     >a {
       /*color: #C69F70;*/
-      background-color: $aux_bgcolor;
-      border-color: $aux_bgcolor;
+      background-color: $aux-bgcolor;
+      border-color: $aux-bgcolor;
+    }
+    >a:hover {
+      /*color: #C69F70;*/
+      background-color: $link-color;
+      border-color: $link-color;
     }
   }
 }
