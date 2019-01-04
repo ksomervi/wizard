@@ -1,16 +1,5 @@
-{% extends "base.html" %}
-{% block description %}All posts which refer to tag {{ tag }}{% endblock %}
-{% block title %}{{ tag }} — {{ SITENAME }}{% endblock %}
-{% block content %}
-<h1>Tag: {{tag}}</h1>
-<table class="table">
-    <tbody>
-    {% for article in articles %}
-        <tr>
-        <td>{{ article.date.strftime("%d %b %Y") }}</td>
-        <td><a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a></td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
+{% extends "index.html" %}
+{% block content_title %}
+<h2>Articles from {{ tag }} </h2>
 {% endblock %}
+
