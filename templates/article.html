@@ -5,6 +5,10 @@
     <meta name="description" content="{{article.description}}" />
   {% endif %}
 
+  {% if article.description %}
+    <meta name="category" content="{{article.category}}" />
+  {% endif %}
+
   {% for tag in article.tags %}
     <meta name="tags" content="{{tag}}" />
   {% endfor %}
